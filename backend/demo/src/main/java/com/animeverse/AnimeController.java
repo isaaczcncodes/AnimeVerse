@@ -12,5 +12,4 @@ public class AnimeController {
         return List.of("Naruto", "One Piece", "Attack on Titan");
     }
 
-    @CrossOrigin(origins = "http://localhost:5173");
 }
