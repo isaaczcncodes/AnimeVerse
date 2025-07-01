@@ -38,4 +38,8 @@ public class AnimeController {
                 )
         );
     }
+        @GetMapping("/api/animes/status")
+        public String status() {
+                return "AnimeVerse API ON";
+    }
 }
