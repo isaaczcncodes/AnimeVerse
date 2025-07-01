@@ -49,7 +49,7 @@ public class AnimeController {
 package com.animeverse.controller;
 
 import com.animeverse.model.Anime;
-import com.animeverse.service.AnimeService;
+import com.animeverse.repository.AnimeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -60,15 +60,15 @@ import java.util.List;
 public class AnimeController {
 
     @Autowired
-    private AnimeService animeService;
+    private AnimeRepository animeRepository;
 
     @GetMapping
-    public List<Anime> getAnimes() {
-        return animeService.getAllAnimes();
+    public List<Anime> getAllAnimes() {
+        return animeRepository.findAll();
     }
 
-    @GetMapping("/status")
-    public String status() {
-        return "AnimeVerse API ON!";
+    @PostMapping
+    public Anime createAnime(@RequestBody Anime anime) {
+        return animeRepository.save(anime);
     }
 }
