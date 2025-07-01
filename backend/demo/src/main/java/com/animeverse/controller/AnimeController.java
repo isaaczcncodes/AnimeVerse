@@ -43,3 +43,32 @@ public class AnimeController {
                 return "AnimeVerse API ON";
     }
 }
+
+/*PARA QUANDO O BANCO DE DADOS ESTIVER PRONTO
+
+package com.animeverse.controller;
+
+import com.animeverse.model.Anime;
+import com.animeverse.service.AnimeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/animes")
+public class AnimeController {
+
+    @Autowired
+    private AnimeService animeService;
+
+    @GetMapping
+    public List<Anime> getAnimes() {
+        return animeService.getAllAnimes();
+    }
+
+    @GetMapping("/status")
+    public String status() {
+        return "AnimeVerse API ON!";
+    }
+}
