@@ -72,3 +72,4 @@ public class AnimeController {
         return animeRepository.save(anime);
     }
 }
+*/

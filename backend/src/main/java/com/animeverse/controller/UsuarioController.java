@@ -1,5 +1,6 @@
 package com.animeverse.controller;
 
+import java.util.List;
 import com.animeverse.model.Usuario;
 import com.animeverse.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
